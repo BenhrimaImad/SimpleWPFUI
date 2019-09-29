@@ -25,6 +25,25 @@
             <!--Description-->
             <TextBlock Text="Description"/>
             <TextBox Padding="2"/>
+            
+            <Grid> <!-- grid of status and revesion-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Revesion"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+            </Grid>
+            
         </StackPanel>
     </Border>
 </Window>
