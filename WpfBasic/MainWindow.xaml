@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBasic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="MainWindow" Height="1000" Width="400">
     <Border Padding="10">
         <StackPanel>
             <!--grid fr the 3 buttons-->
@@ -56,7 +56,7 @@
 
             <!--Manufacturing info-->
             <TextBlock Text="Manufacturing Info" FontWeight="Bold" Margin="0 10 0 0"/>
-            <TextBlock Text="Work Centers"/>
+            <TextBlock Text="Work Centers" Margin="0 10 0 10"/>
             <ComboBox Padding="2"/>
             <!--check boxes Grid-->
             <Grid>
@@ -68,13 +68,50 @@
                 <!--column 0-->
                 <StackPanel Grid.Column="0" Margin="0 10 10 0">
                     <CheckBox  Content="Weld"/>
+                    <CheckBox  Content="Assembly"/>
+                    <CheckBox  Content="Plasma"/>
+                    <CheckBox  Content="Laser"/>
+                    <CheckBox  Content="Purchase"/>
                 </StackPanel>
 
                 <!--column 1-->
                 <StackPanel Grid.Column="1" Margin="0 0 10 0">
+                    <CheckBox  Content="Lathe"/>
+                    <CheckBox  Content="Drill"/>
+                    <CheckBox  Content="Fold"/>
+                    <CheckBox  Content="Roll"/>
+                    <CheckBox  Content="Saw"/>
 
                 </StackPanel>
             </Grid>
+            <TextBlock Text="Length" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+            
+            <TextBlock Text="Mass" Margin="0 5 0 0"/>
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+
+            <TextBlock Text="Finish" Margin="0 5 0 0"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Text="Purchase Information" Margin="0 5 0 0"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Rubber</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Text="Supplier Name" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+
+            <TextBlock Text="Supplier Code" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
+
+            <TextBlock Text="Additional Information" FontWeight="bold" Margin="0 5 0 0"/>
+
+            <TextBlock Text="Note" Margin="0 5 0 0"/>
+            <TextBox Padding="2"/>
 
         </StackPanel>
     </Border>
